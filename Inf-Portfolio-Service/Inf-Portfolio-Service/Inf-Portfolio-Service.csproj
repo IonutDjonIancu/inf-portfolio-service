@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>Inf_Portfolio_Service</RootNamespace>
+    <UserSecretsId>3744cdcd-b6c4-4509-a662-11fb5ffcdf40</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

@@ -1,6 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿using Microsoft.EntityFrameworkCore;
 
 // Code scaffolded by EF Core assumes nullable reference types (NRTs) are not used or disabled.
 // If you have enabled NRTs for your project, then un-comment the following line:
@@ -26,7 +24,8 @@ namespace Inf_Portfolio_Service.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\sqlexpress; Database=PortfolioDb; Trusted_Connection=True; Integrated Security=true");
+                optionsBuilder.UseSqlServer("Server=tcp:avelraansql.database.windows.net,1433;Initial Catalog=PortfolioDb;Persist Security Info=False;User ID=serrienFeathalion;Password=AsrienAndAelara123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                //optionsBuilder.UseSqlServer("Server=.\\sqlexpress; Database=PortfolioDb; Trusted_Connection=True; Integrated Security=true");
             }
         }
 
