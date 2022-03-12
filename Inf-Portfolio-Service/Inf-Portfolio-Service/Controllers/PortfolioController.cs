@@ -20,15 +20,16 @@ namespace Inf_Portfolio_Service.Controllers
             return "all okay";
         }
 
+
+        #region Portfolio
         // GET: /api/portfolio/GetPortfolios
         [HttpGet("GetPortfolios")]
-        public List<Portfolio> GetPortfolios() // quite the antipattern here to return the model directly from the db, a viewmodel could have been used instead
+        public List<Portfolio> GetPortfolios() // quite the antipattern here to return the model directly from the db, a viewmodel could have been used instead, but for the sake of brevity i've went with the model for this demo
         {
             var portService = new PortfolioService();
 
             return portService.GetAllPortfolios();
         }
-
 
         // GET: /api/portfolio/GetPortfolioById/5
         [HttpGet("GetPortfolioById/{id}")]
@@ -56,5 +57,35 @@ namespace Inf_Portfolio_Service.Controllers
 
             return portService.UpdatePortfolio(request);
         }
+        #endregion
+
+        #region Stock
+        // POST: /api/portfolio/CreateStock
+        [HttpPost("CreateStock")]
+        public bool CreateStock([FromBody] string request)
+        {
+            var stockService = new StockService();
+
+            return stockService.StockCrudOperations(request, Ops.Create);
+        }
+
+        // PUT: /api/portfolio/UpdateStock
+        [HttpPut("UpdateStock")]
+        public bool UpdateStock([FromBody] string request)
+        {
+            var stockService = new StockService();
+
+            return stockService.StockCrudOperations(request, Ops.Update);
+        }
+
+        // DELETE: /api/portfolio/DeleteStock
+        [HttpDelete("DeleteStock")]
+        public bool DeleteStock([FromBody] string request)
+        {
+            var stockService = new StockService();
+
+            return stockService.StockCrudOperations(request, Ops.Delete);
+        }
+        #endregion
     }
 }

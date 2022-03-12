@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 
 namespace Inf_Portfolio_Service.Services
 {
-    public class PortfolioService
+    public class PortfolioService // verbose CRUD methods
     {
-        private DataService dataService { get; set; }
+        private DataService DataService { get; set; }
 
         public PortfolioService()
         {
-            dataService = new DataService();
+            DataService = new DataService();
         }
 
         public List<Portfolio> GetAllPortfolios()
         {
-            return dataService.GetPortfolios();
+            return DataService.GetPortfolios();
         }
 
         public Portfolio GetPortfolioById(int id)
         {
-            return dataService.GetPortfolioById(id);
+            return DataService.GetPortfolioById(id);
         }
 
         public bool CreatePortfolio(string request)
@@ -41,7 +41,7 @@ namespace Inf_Portfolio_Service.Services
                 return false;
             }
 
-            return dataService.CreatePortfolio(portfolio);
+            return DataService.CreatePortfolio(portfolio);
         }
 
         public bool UpdatePortfolio(string request)
@@ -63,7 +63,7 @@ namespace Inf_Portfolio_Service.Services
                 return false;
             }
 
-            return dataService.UpdatePortfolio(portfolioToChange);
+            return DataService.UpdatePortfolio(portfolioToChange);
         }
 
     }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Inf_Portfolio_Service.Models
 {
@@ -9,5 +10,7 @@ namespace Inf_Portfolio_Service.Models
 
         public string Name { get; set; }
         public int Code { get; set; }
+
+        public ICollection<Stock> Stocks { get; set; }
     }
 }

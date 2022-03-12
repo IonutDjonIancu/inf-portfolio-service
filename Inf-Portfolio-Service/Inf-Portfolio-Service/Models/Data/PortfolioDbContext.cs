@@ -11,6 +11,7 @@ namespace Inf_Portfolio_Service.Models
     public partial class PortfolioDbContext : DbContext
     {
         public virtual DbSet<Portfolio> Portfolios { get; set; }
+        public virtual DbSet<Stock> Stocks { get; set; }
 
         public PortfolioDbContext()
         {
@@ -40,6 +41,19 @@ namespace Inf_Portfolio_Service.Models
                 entity.Property(e => e.Name).IsRequired();
                 entity.Property(e => e.Code).IsRequired();
             });
+
+            modelBuilder.Entity<Stock>(entity =>
+            {
+                entity.Property(e => e.Symbol).IsRequired();
+                entity.Property(e => e.Name).IsRequired();
+
+            });
+
+            modelBuilder.Entity<Stock>()
+                .HasOne(p => p.Portfolio)
+                .WithMany(b => b.Stocks)
+                .HasForeignKey(p => p.PortfolioId)
+                .HasPrincipalKey(b => b.Guid);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
