@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Inf_Portfolio_Service.Models;
 using Inf_Portfolio_Service.Services;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-
 
 namespace Inf_Portfolio_Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [EnableCors("OpenCORSPolicy")]
     public class PortfolioController : ControllerBase
     {
         // GET: /api/portfolio/GetOk
@@ -86,6 +84,28 @@ namespace Inf_Portfolio_Service.Controllers
 
             return stockService.StockCrudOperations(request, Ops.Delete);
         }
+        #endregion
+
+        #region MockStock
+        // GET: /api/portfolio/GetStocks
+        [HttpGet("GetStocks")]
+        public List<MockStock.MockPoco> GetStocks()
+        {
+            return MockStock.GetStocks();
+        }
+
+        // GET: /api/portfolio/GetStocks/1234
+        [HttpGet("GetStocks/{id}")]
+        public List<MockStock.MockPoco> GetStocksById(int id)
+        {
+            if (id.Equals(MockStock.SECRET))
+            {
+                return MockStock.GetStocks();
+            }
+
+            return new List<MockStock.MockPoco>();
+        }
+
         #endregion
     }
 }

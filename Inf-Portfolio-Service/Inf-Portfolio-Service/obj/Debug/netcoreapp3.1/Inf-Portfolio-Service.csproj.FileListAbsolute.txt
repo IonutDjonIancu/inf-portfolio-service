@@ -75,3 +75,7 @@ C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-
 C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\obj\Debug\netcoreapp3.1\Inf-Portfolio-Service.csproj.CoreCompileInputs.cache
 C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\obj\Debug\netcoreapp3.1\Inf-Portfolio-Service.MvcApplicationPartsAssemblyInfo.cache
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.Inf-Portfolio-Service - Web Deploy.json
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Inf-Portfolio-Service - Web Deploy\mssql1.arm.json
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\Inf-Portfolio-Service - Web Deploy\profile.arm.json

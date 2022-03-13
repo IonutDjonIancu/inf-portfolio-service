@@ -11,6 +11,8 @@ namespace Inf_Portfolio_Service
 {
     public class Startup
     {
+        readonly string CORSOpenPolicy = "OpenCORSPolicy";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -22,9 +24,18 @@ namespace Inf_Portfolio_Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-            services.AddDbContext<PortfolioDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
             services.AddControllersWithViews();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                  name: CORSOpenPolicy,
+                  builder => {
+                      builder.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
+                  });
+            });
+
+            services.AddDbContext<PortfolioDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +55,8 @@ namespace Inf_Portfolio_Service
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseCors(CORSOpenPolicy);
 
             app.UseAuthorization();
 
