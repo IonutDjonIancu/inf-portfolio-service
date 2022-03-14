@@ -24,7 +24,11 @@ namespace Inf_Portfolio_Service.Services
 
         public Portfolio GetPortfolioById(int id)
         {
-            return DataService.GetPortfolioById(id);
+            var portf = DataService.GetPortfolioById(id);
+            portf.Stocks = DataService.GetStocks().Where(s => s.PortfolioId.Equals(portf.Guid)).ToList();
+
+            return portf;
+
         }
 
         public bool CreatePortfolio(string request)

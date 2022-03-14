@@ -59,6 +59,10 @@ namespace Inf_Portfolio_Service.Models.Data
 
 
         #region Stock CRUD
+        public List<Stock> GetStocks()
+        {
+            return Context.Stocks.ToList();
+        }
 
         public Stock GetStockById(int id)
         {
