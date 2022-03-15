@@ -1,11 +1,9 @@
 ﻿using Inf_Portfolio_Service.Models;
 using Inf_Portfolio_Service.Models.Data;
-using Inf_Portfolio_Service.Models.ViewModels;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Inf_Portfolio_Service.Services
 {
@@ -23,24 +21,12 @@ namespace Inf_Portfolio_Service.Services
             return DataService.GetPortfolios();
         }
 
-        public PortfolioVm GetPortfolioVmById(int id)
-        {
-            var portf = DataService.GetPortfolioById(id);
-            var portfvm = new PortfolioVm()
-            {
-                Id = portf.Id,
-                Guid = portf.Guid,
-                Name = portf.Name,
-                Code = portf.Code,
-                Stocks = DataService.GetStocks().Where(s => s.PortfolioId.Equals(portf.Guid)).ToList()
-            };
-            
-            return portfvm;
-        }
-
         public Portfolio GetPortfolioById(int id)
         {
-            return DataService.GetPortfolioById(id);
+            var portf = DataService.GetPortfolioById(id);
+            portf.Stocks = DataService.GetStocks().Where(s => s.PortfolioId.Equals(portf.Guid)).ToList();
+
+            return portf;
         }
 
         public bool CreatePortfolio(string request)

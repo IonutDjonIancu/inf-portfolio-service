@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Inf_Portfolio_Service.Models;
-using Inf_Portfolio_Service.Models.ViewModels;
 using Inf_Portfolio_Service.Services;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
@@ -32,11 +31,11 @@ namespace Inf_Portfolio_Service.Controllers
 
         // GET: /api/portfolio/GetPortfolioById/5
         [HttpGet("GetPortfolioById/{id}")]
-        public PortfolioVm GetPortfolioById(int id)
+        public Portfolio GetPortfolioById(int id)
         {
             var portService = new PortfolioService();
 
-            return portService.GetPortfolioVmById(id);
+            return portService.GetPortfolioById(id);
         }
 
         // POST: /api/portfolio/CreatePortfolio
