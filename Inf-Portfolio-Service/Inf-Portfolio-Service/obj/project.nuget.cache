@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ok/9qcoDv2PegCOUcwwai98rqgNYE3CtGkzC7HMcFrIHLaAgC6MuSV0/C0arAA5C6wEB/yR2HQ2UUhHOKVEDXQ==",
+  "dgSpecHash": "Bp6GmQ4gBzbfdssGeNcpGcV9DaFPlXCtRFGxbxyIPImx6VjA7pGuBiqL8KQtAMSbLSwJWx21cvJGULMQ0IMrjA==",
   "success": true,
   "projectFilePath": "C:\\_djon\\_programming\\inf-portfolio-service\\Inf-Portfolio-Service\\Inf-Portfolio-Service\\Inf-Portfolio-Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\iianc\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\3.1.23\\microsoft.aspnetcore.jsonpatch.3.1.23.nupkg.sha512",
+    "C:\\Users\\iianc\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\3.1.23\\microsoft.aspnetcore.mvc.newtonsoftjson.3.1.23.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -36,6 +38,7 @@
     "C:\\Users\\iianc\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\iianc\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\iianc\\.nuget\\packages\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
