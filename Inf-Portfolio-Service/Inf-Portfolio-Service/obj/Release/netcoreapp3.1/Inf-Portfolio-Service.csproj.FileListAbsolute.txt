@@ -79,3 +79,6 @@ C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-
 C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\obj\Release\netcoreapp3.1\Inf-Portfolio-Service.dll
 C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\obj\Release\netcoreapp3.1\Inf-Portfolio-Service.pdb
 C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\obj\Release\netcoreapp3.1\Inf-Portfolio-Service.genruntimeconfig.cache
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\_djon\_programming\inf-portfolio-service\Inf-Portfolio-Service\Inf-Portfolio-Service\bin\Release\netcoreapp3.1\Newtonsoft.Json.Bson.dll

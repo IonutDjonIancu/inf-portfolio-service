@@ -69,6 +69,11 @@ namespace Inf_Portfolio_Service.Models.Data
             return Context.Stocks.Where(s => s.Id.Equals(id)).FirstOrDefault();
         }
 
+        public Stock GetStockByGuid(Guid guid)
+        {
+            return Context.Stocks.Where(s => s.Guid.Equals(guid)).FirstOrDefault();
+        }
+
         public bool CreateStock(Stock stock)
         {
             try
